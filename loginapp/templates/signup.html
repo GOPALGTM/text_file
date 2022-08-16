@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <title>signup</title>
+</head>
+
+<body>
+    <h1 class="text-center">Signup Page</h1>
+    {% for message in messages %} {{message}} {% endfor %}
+
+    <div class="container py-4">
+        <form action="/signup/" method="post">
+            {% csrf_token %}
+            <div>
+                <label for="exampleinputname">Username</label>
+                <input type="text" name="username" id="" class="form-control">
+            </div>
+
+            <div>
+                <label for="exampleinputemail">Email</label>
+                <input type="email" name="email" id="" class="form-control">
+            </div>
+
+            <div>
+                <label for="exampleinputfname">First_name</label>
+                <input type="text" name="fname" id="" class="form-control">
+            </div>
+
+            <div>
+                <label for="exampleinputlname">Last_name</label>
+                <input type="text" name="lname" id="" class="form-control">
+            </div>
+
+            <div>
+                <label for="exampleinputpassword">Password</label>
+                <input type="password" name="password" id="" class="form-control">
+            </div>
+
+            <div>
+                <label for="exampleinputcpassword">Confirm_password</label>
+                <input type="password" name="cpassword" id="" class="form-control">
+            </div>
+
+            <div>
+                <button type="submit" class="btn btn-primary my-2">sign up</button>
+            </div>
+        </form>
+    </div>
+</body>
+
+</html>
